@@ -40,6 +40,35 @@ Follow these steps to set up the project locally:
    git clone https://github.com/akashlimbani/user-management-system.git
    cd user-management-system/backend
 
+2. Restore the NuGet packages:
+
+   ```bash
+   dotnet restore
+
+3. Run the application:
+
+   ```bash
+   dotnet run
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+
+   ```bash
+   cd ../frontend
+
+2. Install the required npm packages:
+
+   ```bash
+   npm install
+
+3. Run the Angular application:
+
+   ```bash
+   ng serve
+
+4. Open your browser and navigate to `http://localhost:4200`.
+
 ### Response view
 
 ![gif](https://github.com/akashlimbani/DOTNETAngularDemo/blob/main/Sources/dotnetangulardemo-ezgif.com-video-to-gif-converter.gif)
