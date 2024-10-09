@@ -42,4 +42,4 @@ Follow these steps to set up the project locally:
 
 ### Response view
 
-[![Watch the video](https://github.com/akashlimbani/DOTNETAngularDemo/blob/main/Sources/DotNet-Angular-Demo-10-09-2024_05_36_PM.png)](https://github.com/akashlimbani/DOTNETAngularDemo/blob/main/Sources/dotnetangulardemo.mp4)
+![gif](https://github.com/akashlimbani/DOTNETAngularDemo/blob/main/Sources/dotnetangulardemo-ezgif.com-video-to-gif-converter.gif)
