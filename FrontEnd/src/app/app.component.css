@@ -1,0 +1,22 @@
+/* styles.css or app.component.css */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* This allows the content to expand and push the footer down */
+}
+
+footer {
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

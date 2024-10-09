@@ -42,4 +42,23 @@ public class UsersController(IUsersService usersService) : ControllerBase
         await _usersService.DeleteUserAsync(id);
         return NoContent();
     }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateUser(string id, [FromBody] User user)
+    {
+        if (!user.ConsentGiven)
+            return BadRequest("User consent is required.");
+
+        var existingUser = await _usersService.GetUserByIdAsync(id);
+        if (existingUser == null)
+            return NotFound("User not found.");
+
+        existingUser.Name = user.Name;
+        existingUser.Email = user.Email;
+        existingUser.ConsentGiven = user.ConsentGiven;
+
+        await _usersService.UpdateUserAsync(existingUser);
+
+        return NoContent(); // 204 No Content response
+    }
 }

@@ -1,0 +1,20 @@
+/* user-list.component.css */
+.table {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds shadow to the table */
+}
+
+.table th {
+  background-color: #343a40; /* Dark background for table headers */
+  color: white; /* White text for table headers */
+}
+
+.table td {
+  vertical-align: middle; /* Center-aligns cell content */
+}
+
+/* Optional: Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .table {
+    font-size: 14px; /* Decrease font size on smaller screens */
+  }
+}

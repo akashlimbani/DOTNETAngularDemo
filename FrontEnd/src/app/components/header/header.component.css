@@ -1,0 +1,17 @@
+/* header.component.css */
+.custom-header {
+  background-color: #3498db; /* Custom header background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group .btn {
+  margin-left: 10px; /* Add margin for spacing between buttons */
+}
+
+.btn-primary:hover {
+  background-color: #007bff; /* Custom hover color for User List */
+}
+
+.btn-secondary:hover {
+  background-color: #6c757d; /* Custom hover color for Create User */
+}

@@ -1,3 +1,4 @@
+using BackendAPI.Data;
 using BackendAPI.Models.Common;
 using BackendAPI.Services;
 using MongoDB.Driver;
@@ -17,7 +18,17 @@ builder.Services.Configure<MongoDBSettings>(
 builder.Services.AddSingleton<IMongoClient, MongoClient>(
     sp => new MongoClient(builder.Configuration.GetValue<string>("MongoDB:ConnectionString")));
 
+builder.Services.AddScoped<MongoDBContext>();
 builder.Services.AddScoped<IUsersService, UsersService>();
+
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("http://localhost:4200") // Your Angular frontend URL
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
 
 var app = builder.Build();
 
@@ -27,6 +38,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Use CORS policy
+app.UseCors("AllowSpecificOrigin");
 
 app.UseHttpsRedirection();
 

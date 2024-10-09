@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <h2 class="text-center mb-4">User List</h2>
+  <table class="table text-center table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Created At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.createdAt | date: 'mediumDate' }}</td>
+        <td>
+          <button class="btn btn-warning mx-2" (click)="editUser(user)">Edit</button>
+          <button class="btn btn-danger mx-2" (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

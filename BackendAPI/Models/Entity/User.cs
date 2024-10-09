@@ -6,8 +6,8 @@ namespace BackendAPI.Models.Entity
     public class User
     {
         [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        [BsonRepresentation(BsonType.String)]
+        public string? Id { get; set; }
 
         [BsonElement("Name")]
         public string Name { get; set; }
